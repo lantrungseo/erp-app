@@ -114,6 +114,8 @@ docker-compose.yml
 
 ```bash
 docker-compose up -d
+# for mongo
+docker-compose up -d mongo
 ```
 
 This will build the images and bring up the containers for frontend, backend and mongodb.

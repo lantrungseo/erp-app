@@ -38,11 +38,15 @@ services:
       - backend
 
   mongo:
-    image: mongo
+    image: mongo:5.0.24
+    container_name: mongodb
+    ports:
+      - "25000:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: andrew
+      MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
       - mongodb_data:/data/db
-    networks:
-      - server-mongo
 
 volumes:
   mongodb_data:
